@@ -1,2 +1,12 @@
 <h1>Tasks#edit</h1>
-<p>Find me in app/views/tasks/edit.html.erb</p>
+<%= link_to '一覧', tasks_path %>
+
+<%= form_with model: @task do |f| %>
+  <div>
+    <p><%= f.label :name %></p>
+    <p><%= f.text_field :name %></p>
+    <p><%= f.label :email %></p>
+    <p><%= f.text_field :email %></p>
+    <p><%= f.submit nil %></p>
+  </div>
+<% end %>

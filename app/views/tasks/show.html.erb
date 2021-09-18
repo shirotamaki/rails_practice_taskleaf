@@ -1,2 +1,11 @@
 <h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<%= link_to '一覧', tasks_path %>
+
+<P><%= Task.human_attribute_name(:id) %></P>
+<P><%= @task.id %></P>
+<P><%= Task.human_attribute_name(:email) %></P>
+<P><%= @task.email %></P>
+<P><%= Task.model_name.human %></P>
+<P><%= @task.description %></P>
+<%= link_to '編集', edit_task_path %>
+<%= link_to '削除', @task, method: :delete %>
